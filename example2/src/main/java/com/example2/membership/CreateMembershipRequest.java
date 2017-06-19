@@ -1,6 +1,6 @@
-package com.example1.membership;
+package com.example2.membership;
 
-public class Membership {
+public class CreateMembershipRequest {
     private String memberName;
     private String birthDate;
     private String email;
@@ -46,15 +46,5 @@ public class Membership {
     public void setMembershipEndDate(String membershipEndDate) {
         this.membershipEndDate = membershipEndDate;
     }
-
-    @Override
-    public String toString() {
-        return "Membership{" +
-                "memberName='" + memberName + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                ", email='" + email + '\'' +
-                ", membershipStartDate='" + membershipStartDate + '\'' +
-                ", membershipEndDate='" + membershipEndDate + '\'' +
-                '}';
-    }
 }
+

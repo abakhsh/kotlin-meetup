@@ -22,9 +22,6 @@ public class MemberController {
     }
 }
 
-
-
-
 /*
 POST /membership
 {

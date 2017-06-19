@@ -1,4 +1,4 @@
-package com.example1.membership;
+package com.example2.membership;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -9,21 +9,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberController {
 
     private MembershipRepository membershipRepository;
+    private MembershipRequestTranslator membershipRequestTranslator;
 
     @Autowired
-    MemberController(MembershipRepository membershipRepository) {
+    MemberController(MembershipRepository membershipRepository, MembershipRequestTranslator membershipRequestTranslator) {
         this.membershipRepository = membershipRepository;
+        this.membershipRequestTranslator = membershipRequestTranslator;
     }
 
     @PostMapping("/membership")
-    public String createMembership(@RequestBody Membership membership) {
+    public String createMembership(@RequestBody CreateMembershipRequest createMembershipRequest) {
+        Membership membership = membershipRequestTranslator.translate(createMembershipRequest);
         membershipRepository.save(membership);
         return "saved " + membership;
     }
 }
-
-
-
 
 /*
 POST /membership
