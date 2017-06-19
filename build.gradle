@@ -1,0 +1,24 @@
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    jar {
+        baseName = 'gs-spring-boot'
+        version = '0.1.0'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    dependencies {
+        compile("org.springframework.boot:spring-boot-starter-web")
+        compile("org.springframework.boot:spring-boot-starter-actuator")
+        testCompile("org.springframework.boot:spring-boot-starter-test")
+    }
+}

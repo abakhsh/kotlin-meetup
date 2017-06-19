@@ -1,0 +1,3 @@
+rootProject.name = 'kotlin-meetup'
+
+include 'example1', 'example2'
