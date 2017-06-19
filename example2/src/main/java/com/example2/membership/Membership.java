@@ -3,31 +3,31 @@ package com.example2.membership;
 import java.util.Date;
 
 public class Membership {
-    private String memberName;
-    private Date birthDate;
-    private String email;
-    private DateRange activeDateRange;
+    private final String memberName;
+    private final Date birthDate;
+    private final String email;
+    private final DateRange activeDateRange;
 
-    public Membership(String memberName, Date birthDate, String email, DateRange activeDateRange) {
+    Membership(String memberName, Date birthDate, String email, DateRange activeDateRange) {
         this.memberName = memberName;
         this.birthDate = birthDate;
         this.email = email;
         this.activeDateRange = activeDateRange;
     }
 
-    public String getMemberName() {
+    String getMemberName() {
         return memberName;
     }
 
-    public Date getBirthDate() {
+    Date getBirthDate() {
         return birthDate;
     }
 
-    public String getEmail() {
+    String getEmail() {
         return email;
     }
 
-    public DateRange getActiveDateRange() {
+    DateRange getActiveDateRange() {
         return activeDateRange;
     }
 
