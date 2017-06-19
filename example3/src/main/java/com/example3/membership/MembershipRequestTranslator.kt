@@ -13,10 +13,10 @@ open class MembershipRequestTranslator {
             memberName = inObject.memberName ?: throw RuntimeException("memberName cannot be empty"),
             birthDate = inObject.birthDate?.toDate() ?: throw RuntimeException("birthDate cannot be empty"),
             email = inObject.email ?: throw RuntimeException("email cannot be empty"),
-            activeDateRange = inObject.getDateRange()
+            activeDateRange = inObject.getActiveDateRange()
     )
 
-    private fun CreateMembershipRequest.getDateRange() = DateRange(
+    private fun CreateMembershipRequest.getActiveDateRange() = DateRange(
             membershipStartDate?.toDate()?.time ?: throw RuntimeException("membershipStartDate cannot be empty"),
             membershipEndDate?.toDate()?.time ?: throw RuntimeException("membershipEndDate cannot be empty")
     )
