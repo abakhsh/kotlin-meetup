@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Component
-public class MembershipRequestTranslator {
+class MembershipRequestTranslator {
     Membership translate(CreateMembershipRequest createMembershipRequest) {
         if (createMembershipRequest.getBirthDate() == null) {
             throw new RuntimeException("birthDate cannot be empty");

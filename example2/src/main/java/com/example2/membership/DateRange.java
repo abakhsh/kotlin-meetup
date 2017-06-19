@@ -4,16 +4,16 @@ class DateRange {
     private long epochStart;
     private long epochEnd;
 
-    public DateRange(long epochStart, long epochEnd) {
+    DateRange(long epochStart, long epochEnd) {
         this.epochStart = epochStart;
         this.epochEnd = epochEnd;
     }
 
-    public long getEpochStart() {
+    long getEpochStart() {
         return epochStart;
     }
 
-    public long getEpochEnd() {
+    long getEpochEnd() {
         return epochEnd;
     }
 
